@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const mongoose = require('mongoose');
 const bodyparser = require('body-parser');
+const dbUrl = "mongodb://username:password@host:port/dbname"
 
 let app = express()
 app.server = http.createServer(app)
@@ -26,4 +27,5 @@ userRoute.get('/', (req, res) => {
 
 app.use('/user', userRoute)
 
+mongoose.connect(dbUrl)
 app.server.listen(3000)
