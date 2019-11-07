@@ -1,0 +1,10 @@
+{
+  "name": "nodejs-boiler",
+  "version": "1.0.0",
+  "description": "This is a boilerplate for nodejs. It includes connection to db and simple express server",
+  "main": "index.js",
+  "repository": "https://github.com/Muhand/nodejs-boiler.git",
+  "author": "Muhand Jumah <muhandjumah@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
