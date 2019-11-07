@@ -27,5 +27,10 @@ userRoute.get('/', (req, res) => {
 
 app.use('/user', userRoute)
 
-mongoose.connect(dbUrl)
+let options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}
+
+mongoose.connect(dbUrl, options)
 app.server.listen(3000)
