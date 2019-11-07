@@ -10,7 +10,9 @@ app.use(bodyparser.urlencoded({extended: true}))
 
 app.use(bodyparser.json({limit: '100kb'}))
 
-app.use('/', (req, res) => {
+let userRoute = express.Router()
+
+userRoute.get('/', (req, res) => {
   let obj = {
     first_name: "Muhand",
     last_name: "Jumah"
@@ -21,5 +23,7 @@ app.use('/', (req, res) => {
   res.writeHead(200, {'Content-Type':"application/json"})
   res.end(JSON.stringify(obj))
 })
+
+app.use('/user', userRoute)
 
 app.server.listen(3000)
